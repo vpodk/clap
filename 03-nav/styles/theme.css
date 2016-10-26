@@ -1,0 +1,45 @@
+/**
+ * Default application CSS theme.
+ *
+ * Please put here only colors and background images.
+ * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background
+ * @see https://developer.mozilla.org/en-US/docs/Web/CSS/color
+ * @see https://developer.mozilla.org/en-US/docs/Web/CSS/opacity
+ *
+ * @see https://google.github.io/styleguide/htmlcssguide.html
+ * @see https://github.com/google/closure-stylesheets
+ * @see https://en.wikipedia.org/wiki/Web_colors
+ */
+
+body {
+  background-color: White;
+  color: DarkSlateGray;
+}
+
+header,
+footer {
+  background-color: Indigo;
+  color: White;
+}
+
+#main > aside {
+  background-color: LightCyan;
+}
+
+nav ul,
+nav a {
+  background-color: Indigo;
+  color: White;
+}
+
+nav .menu a.active,
+nav .menu a:active,
+nav .menu a:hover {
+  background-color: DarkMagenta;
+}
+
+nav .hamburger span,
+nav .hamburger span::before,
+nav .hamburger span::after {
+  background-color: White;
+}

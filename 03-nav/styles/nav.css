@@ -1,0 +1,127 @@
+/**
+ * Main styles for hamburger menu.
+ *
+ * @see https://google.github.io/styleguide/htmlcssguide.html
+ * @see https://github.com/google/closure-stylesheets
+ */
+
+nav {
+  display: block;
+  float: right;
+  left: -1em;
+  padding-top: .2em;
+  position: absolute;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+  -webkit-user-select: none;
+}
+
+nav input,
+nav .hamburger {
+  height: 32px;
+  position: absolute;
+  right: 0;
+  width: 40px;
+}
+
+nav input {
+  display: block;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+nav .hamburger span,
+nav .hamburger span:before,
+nav .hamburger span:after {
+  border-radius: 4px;
+  height: 2px;
+  position: absolute;
+  transition: transform .15s ease;
+  width: 35px;
+}
+
+nav .hamburger span {
+  display: block;
+  margin-top: 8px;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(.68, -.55, 0.265, 1.55);
+}
+
+nav .hamburger span:before,
+nav .hamburger span:after {
+  content: "";
+  display: block;
+}
+
+nav .hamburger span:before {
+  top: 10px;
+  transition: opacity .15s .4s ease;
+}
+
+nav .hamburger span:after {
+  bottom: -10px;
+  top: 20px;
+  transition: transform .4s cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+nav ul {
+  bottom: 0;
+  left: 0;
+  list-style-type: none;
+  opacity: 0;
+  padding: 2.5em 1em;
+  position: fixed;
+  right: 0;
+  top: 4em;
+  transform-origin: 0% 0%;
+  transform: translate(0, -200%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.5s ease-out;
+  text-align: right;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  z-index: 99;
+}
+
+nav input:checked ~ ul {
+  opacity: .95;
+  transform: none;
+  z-index: 99;
+}
+
+nav input:checked ~ .hamburger span {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 0.1s;
+}
+
+nav input:checked ~ .hamburger span:before {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+nav input:checked ~ .hamburger span:after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+  transition-delay: .1s;
+}
+
+nav .menu a {
+  display: inline-block;
+  margin: 1em 0 0;
+  padding: 1em 1em .8em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav .menu .active,
+nav .menu :active {
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .hamburger {display: none;}
+  nav, nav ul  {padding: 0; position: static; margin: 0; width: auto;}
+  nav ul {opacity: 1; margin-top: -1em; transform: none; transition: none;}
+  nav li {display: inline-block;}
+  nav .menu .active {margin: 1em;}
+}

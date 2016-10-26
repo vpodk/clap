@@ -1,0 +1,47 @@
+/**
+ * Main application styles.
+ *
+ * @see https://google.github.io/styleguide/htmlcssguide.html
+ * @see https://github.com/google/closure-stylesheets
+ */
+
+body {
+  font-family: arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#main {
+  margin: 5em auto 0;
+}
+
+header,
+footer {
+  height: 5em;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+}
+
+header h1 {
+  float: left;
+}
+
+@media only screen and (min-width: 768px) {
+  header,
+  footer,
+  #main {
+    max-width: 1440px;
+  }
+
+  header,
+  footer {
+    margin: 0 auto;
+  }
+
+  header {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

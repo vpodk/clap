@@ -1,0 +1,46 @@
+/**
+ * Flexbox is a one-dimensional layout method for laying out items in rows or columns.
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+ *
+ * @see https://google.github.io/styleguide/htmlcssguide.html
+ * @see https://github.com/google/closure-stylesheets
+ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main,
+#main > article {
+  flex: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  #main {
+    display: flex;
+  }
+
+  #main > aside {
+    flex: 0 0 20%;
+  }
+
+  #main > aside:first-of-type {
+    order: -1;
+  }
+}
+
+aside,
+footer,
+header,
+#main > article {
+  padding: 1em;
+}
