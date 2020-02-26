@@ -228,7 +228,7 @@ The page can be resized (as we had done previously) or emulated for mobile devic
 
 <table width="100%">
 <tr>
-<td>Previous: <a href="../02-header">Block Positions</a></td>
+<td>Previous: <a href="../02-positions">Block Positions</a></td>
 <td align="right">Next: <a href="../04-images">Inline Images</a></td>
 </tr>
 </table>
