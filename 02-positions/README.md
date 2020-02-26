@@ -1,3 +1,6 @@
+![The Conjurer by Hieronymus Bosch](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Hieronymus_Bosch_051.jpg/2560px-Hieronymus_Bosch_051.jpg)
+<sup>[The Conjurer](https://en.wikipedia.org/wiki/The_Conjurer_(painting)) by [Hieronymus Bosch](https://en.wikipedia.org/wiki/Hieronymus_Bosch)</sup>
+
 # Block Positions
 
 When we deal with positioning of our contents on a page, there are various useful properties that can be helpful in manipulating the different positions of an element.
@@ -78,11 +81,14 @@ header h1 {
 }
 ```
 
-[TDB] Shot explanations:
-* Position: Fixed;
-* TranslateX(-50%);
-* Margin: 0 (auto);
-* Max-width: 1440px;
+## Detailed Explanation
+
+The `header` element with `position: fixed` will be positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+
+Setting `margin: 0 auto` property to horizontally center the `header` and `footer` elements within `body` container.
+Elements will occupy the specified width, and the remaining space will be divided evenly between the left and right margins.
+
+To fix the Safari issue with the positioning of the element with a fixed position to the page center, we will use `translateX(-50%)` property for the header element.
 
 Next, we link [app.css](styles/app.css) file to our [index.html](index.html) page:
 
