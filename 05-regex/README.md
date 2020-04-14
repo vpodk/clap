@@ -88,7 +88,7 @@ It should typically appear as:
 
 ```javascript
 var content = '<a href="mailto:{{email}}">{{ name }}</a>';
-var values = {email: 'info@examle.com', name: 'Valentin'};
+var values = {email: 'me@examle.com', name: 'Valentin'};
 for (var key in values) {
   var re = new RegExp('{{\\s*' + key + '\\s*}}', 'img');
   content = content.replace(re, values[key]);
