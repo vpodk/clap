@@ -3,7 +3,9 @@
 So, what is the Clap?
 Clap is the shortening of Clean Application.
 
-In this step-by-step tutorials we will build clean, lightweight and extremely fast web application together without any fast-food frameworks and this will lead us to save the environment by reducing energy consumption.
+In this series of lessons, we will build a clean, lightweight, and extremely fast web application step by step.
+We will do this without any modern "fast-food" frameworks such as Angular, React, and Vue.
+As a result, it will lead us to saving the environment by reducing energy consumption.
 
 ## Tutorials
 
